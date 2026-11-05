@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment | LensCraft Photography Studio</title>
+  <meta name="description" content="Submit your photography session inquiry or package booking with LensCraft Studio. Direct booking confirmation and email routing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M3 9a2 2 0 0 1 2-2h.93a2 2 0 0 0 1.664-.89l.812-1.22A2 2 0 0 1 10.07 4h3.86a2 2 0 0 1 1.664.89l.812 1.22A2 2 0 0 0 18.07 7H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path>
+        </svg>
+        Lens<span>Craft</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="packages.html" class="nav-link">Packages</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="booking.html" class="btn btn-primary btn-sm">Book a Session</a>
+        <button class="mobile-nav-toggle" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header Banner -->
+    <section class="page-banner">
+      <div class="container">
+        <span class="section-tag">Reservations & Scheduling</span>
+        <h1>Book an Appointment</h1>
+        <p>Select your photography category, package, and preferred schedule. Submissions are processed with instant client confirmation and direct email dispatch.</p>
+      </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="section">
+      <div class="container" style="max-width: 960px;">
+        <!-- Submission Success Display -->
+        <div id="bookingSuccessCard" class="submission-success-card">
+          <div class="success-check-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span class="section-tag" style="color:var(--accent-gold);">Demo Booking Inquiry Recorded</span>
+          <h2 style="margin-bottom: 1rem;">Thank You, <span id="confirmedClientName">Client</span>!</h2>
+          <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto 1.5rem auto; line-height: 1.7;">
+            Your session inquiry for <strong id="confirmedService" style="color:var(--accent-gold);">Service</strong> has been saved to your browser session. To formally dispatch this booking to the studio, you can launch your email client with one click below:
+          </p>
+
+          <div style="background: var(--bg-secondary); border-radius: var(--radius-md); padding: 1.5rem; max-width: 600px; margin: 0 auto 2rem auto; text-align: left; font-size: 0.92rem; border: 1px solid var(--border-color);">
+            <div style="margin-bottom: 0.5rem;"><strong>Target Recipient:</strong> anzaaleem1804@gmail.com</div>
+            <div style="margin-bottom: 0.5rem;"><strong>Studio Contact:</strong> +92 3292450128</div>
+            <div style="margin-bottom: 0.5rem;"><strong>Preferred Date:</strong> <span id="confirmedDate"></span></div>
+            <div style="margin-bottom: 0.5rem;"><strong>Package:</strong> <span id="confirmedPackage"></span></div>
+            <div><strong>Location:</strong> <span id="confirmedLocation"></span></div>
+          </div>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a id="directMailtoBtn" href="#" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Open Email in Outlook / Gmail
+            </a>
+            <button id="bookAnotherBtn" class="btn btn-outline">Submit Another Inquiry</button>
+          </div>
+        </div>
+
+        <!-- Form Container -->
+        <div id="bookingFormContainer" class="form-container">
+          <div style="margin-bottom: 2.5rem; text-align: center;">
+            <span class="section-tag">Step-by-Step Intake</span>
+            <h2>Tell Us About Your Vision</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">
+              Fill in all required fields (<span style="color:#ef4444;">*</span>). Inquiries are routed directly to <strong>anzaaleem1804@gmail.com</strong>.
+            </p>
+          </div>
+
+          <form id="bookingInquiryForm" novalidate>
+            <div class="form-grid">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="fullName" class="form-label">Full Name <span class="required-star">*</span></label>
+                <input type="text" id="fullName" class="form-control" placeholder="e.g. Eleanor Vance" required minlength="2">
+                <span class="error-text">Please enter your full name (minimum 2 characters).</span>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label for="emailAddress" class="form-label">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="emailAddress" class="form-control" placeholder="you@domain.com" required>
+                <span class="error-text">Please enter a valid email address.</span>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <label for="phoneNumber" class="form-label">Phone Number <span class="required-star">*</span></label>
+                <input type="tel" id="phoneNumber" class="form-control" placeholder="e.g. +92 300 1234567" required minlength="7">
+                <span class="error-text">Please provide a valid phone number with area code.</span>
+              </div>
+
+              <!-- Photography Service / Category -->
+              <div class="form-group">
+                <label for="photoService" class="form-label">Photography Service / Category <span class="required-star">*</span></label>
+                <select id="photoService" class="form-control" required>
+                  <option value="" disabled selected>Select category / discipline...</option>
+                  <option value="Wedding Photography">Wedding Photography</option>
+                  <option value="Pre-Wedding and Engagement Shoots">Pre-Wedding & Engagement Shoots</option>
+                  <option value="Portrait and Personal Branding Photography">Portrait & Personal Branding</option>
+                  <option value="Fashion and Model Photography">Fashion & Model Photography</option>
+                  <option value="Corporate and Event Photography">Corporate & Event Photography</option>
+                  <option value="Product and E-commerce Photography">Product & E-Commerce Photography</option>
+                  <option value="Family and Lifestyle Photography">Family & Lifestyle Photography</option>
+                  <option value="Maternity and Newborn Photography">Maternity & Newborn Photography</option>
+                  <option value="Custom Bespoke Production">Custom Bespoke Production</option>
+                </select>
+                <span class="error-text">Please select a photography service.</span>
+              </div>
+
+              <!-- Selected Package -->
+              <div class="form-group">
+                <label for="photoPackage" class="form-label">Selected Package <span class="required-star">*</span></label>
+                <select id="photoPackage" class="form-control" required>
+                  <option value="" disabled selected>Select preferred package...</option>
+                  <option value="Basic Package ($299)">Basic Package ($299) — 1.5 Hours, 25 Photos</option>
+                  <option value="Standard Package ($599)">Standard Package ($599) — 4 Hours, 65 Photos (Recommended)</option>
+                  <option value="Premium Package ($1,199)">Premium Package ($1,199) — Full Day 8 Hours, 150+ Photos</option>
+                  <option value="Custom Quotation">Custom Tailored Quotation</option>
+                </select>
+                <span class="error-text">Please select a package tier.</span>
+              </div>
+
+              <!-- Estimated Budget -->
+              <div class="form-group">
+                <label for="estimatedBudget" class="form-label">Estimated Budget (USD / PKR)</label>
+                <select id="estimatedBudget" class="form-control">
+                  <option value="Under $500">Under $500</option>
+                  <option value="$500 - $1,000" selected>$500 - $1,000</option>
+                  <option value="$1,000 - $2,500">$1,000 - $2,500</option>
+                  <option value="$2,500+">$2,500+ (Luxury / Multi-Day)</option>
+                </select>
+              </div>
+
+              <!-- Preferred Date -->
+              <div class="form-group">
+                <label for="preferredDate" class="form-label">Preferred Session Date <span class="required-star">*</span></label>
+                <input type="date" id="preferredDate" class="form-control" required>
+                <span class="error-text">Please pick your target session date.</span>
+              </div>
+
+              <!-- Preferred Time -->
+              <div class="form-group">
+                <label for="preferredTime" class="form-label">Preferred Time of Day</label>
+                <select id="preferredTime" class="form-control">
+                  <option value="Morning Light (8:00 AM - 11:00 AM)">Morning Light (8:00 AM - 11:00 AM)</option>
+                  <option value="Midday Studio (11:00 AM - 3:00 PM)">Midday Studio (11:00 AM - 3:00 PM)</option>
+                  <option value="Golden Hour / Sunset (4:00 PM - 7:00 PM)" selected>Golden Hour / Sunset (4:00 PM - 7:00 PM)</option>
+                  <option value="Evening / Night Gala">Evening / Night Gala</option>
+                  <option value="Flexible / Photographer Recommended">Flexible / Recommended</option>
+                </select>
+              </div>
+
+              <!-- Preferred Location -->
+              <div class="form-group full-width">
+                <label for="preferredLocation" class="form-label">Preferred Location / Venue <span class="required-star">*</span></label>
+                <input type="text" id="preferredLocation" class="form-control" placeholder="e.g. LensCraft Daylight Studio, Serena Islamabad, or Outdoor Botanical Garden" required>
+                <span class="error-text">Please enter the shoot location or specify 'Studio'.</span>
+              </div>
+
+              <!-- Additional Requirements or Message -->
+              <div class="form-group full-width">
+                <label for="clientMessage" class="form-label">Additional Requirements or Creative Brief</label>
+                <textarea id="clientMessage" class="form-control" rows="4" placeholder="Tell us about the occasion, vibe, outfits, moodboards, or specific shots you envision..."></textarea>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div style="margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center; justify-content: flex-end; flex-wrap: wrap;">
+              <button type="reset" id="resetFormBtn" class="btn btn-outline">Clear Form</button>
+              <button type="submit" class="btn btn-primary">
+                <span>Submit & Send to Studio</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Previous Local Storage Demo Submissions -->
+        <div id="previousBookingsWrap" style="margin-top: 3.5rem; display: none;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+            Your Active Inquiries (Stored in Browser)
+          </h3>
+          <div id="previousBookingsList" style="display: flex; flex-direction: column; gap: 1rem;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Lens<span>Craft</span></h3>
+          <p>Premier photography studio dedicated to authentic visual storytelling, bespoke portraits, breathtaking weddings, and high-impact commercial campaigns.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Studio</a></li>
+            <li><a href="portfolio.html">Portfolio Gallery</a></li>
+            <li><a href="services.html">Services & Specialities</a></li>
+            <li><a href="packages.html">Pricing Packages</a></li>
+            <li><a href="booking.html">Book an Appointment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Disciplines</h4>
+          <ul class="footer-links">
+            <li><a href="portfolio.html?cat=wedding">Wedding Stories</a></li>
+            <li><a href="portfolio.html?cat=portrait">Editorial Portraits</a></li>
+            <li><a href="portfolio.html?cat=fashion">Fashion & Runway</a></li>
+            <li><a href="portfolio.html?cat=event">Corporate & Galas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Studio Contact</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Email: <a href="mailto:anzaaleem1804@gmail.com" style="color:var(--accent-gold); font-weight:500;">anzaaleem1804@gmail.com</a></span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Call / WhatsApp: <a href="tel:+923292450128" style="color:var(--accent-gold); font-weight:500;">+92 3292450128</a></span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Studio 402, Highline Creative District, Lahore / Islamabad</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 LensCraft Photography Studio. All rights reserved.</p>
+        <p>Inquiries automatically route to <a href="mailto:anzaaleem1804@gmail.com" style="color:var(--accent-gold);">anzaaleem1804@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Pre-fill service or package if passed in URL query
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+      const packageParam = urlParams.get('package');
+
+      if (serviceParam) {
+        const serviceSelect = document.getElementById('photoService');
+        for (let opt of serviceSelect.options) {
+          if (opt.value.toLowerCase().includes(serviceParam.toLowerCase())) {
+            opt.selected = true;
+            break;
+          }
+        }
+      }
+
+      if (packageParam) {
+        const packageSelect = document.getElementById('photoPackage');
+        for (let opt of packageSelect.options) {
+          if (opt.value.toLowerCase().includes(packageParam.toLowerCase())) {
+            opt.selected = true;
+            break;
+          }
+        }
+      }
+
+      // Pre-set minimum date to tomorrow
+      const dateInput = document.getElementById('preferredDate');
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      dateInput.min = tomorrow.toISOString().split('T')[0];
+
+      // Render previous bookings from localStorage
+      loadSavedBookings();
+
+      // Form Submission & Validation Logic
+      const form = document.getElementById('bookingInquiryForm');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nameInput = document.getElementById('fullName');
+        const emailInput = document.getElementById('emailAddress');
+        const phoneInput = document.getElementById('phoneNumber');
+        const serviceInput = document.getElementById('photoService');
+        const packageInput = document.getElementById('photoPackage');
+        const dateInput = document.getElementById('preferredDate');
+        const locationInput = document.getElementById('preferredLocation');
+        const budgetInput = document.getElementById('estimatedBudget');
+        const timeInput = document.getElementById('preferredTime');
+        const messageInput = document.getElementById('clientMessage');
+
+        let isValid = true;
+
+        // Helper validate
+        function validateField(input, condition) {
+          if (!condition) {
+            input.classList.add('is-invalid');
+            isValid = false;
+          } else {
+            input.classList.remove('is-invalid');
+          }
+        }
+
+        validateField(nameInput, nameInput.value.trim().length >= 2);
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        validateField(emailInput, emailRegex.test(emailInput.value.trim()));
+        validateField(phoneInput, phoneInput.value.trim().length >= 7);
+        validateField(serviceInput, serviceInput.value !== "");
+        validateField(packageInput, packageInput.value !== "");
+        validateField(dateInput, dateInput.value !== "");
+        validateField(locationInput, locationInput.value.trim().length >= 3);
+
+        if (!isValid) {
+          showToast("Please fill in all highlighted required fields correctly.");
+          return;
+        }
+
+        // Form valid! Assemble inquiry object
+        const inquiryData = {
+          id: Date.now(),
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          phone: phoneInput.value.trim(),
+          service: serviceInput.value,
+          package: packageInput.value,
+          budget: budgetInput.value,
+          date: dateInput.value,
+          time: timeInput.value,
+          location: locationInput.value.trim(),
+          message: messageInput.value.trim(),
+          submittedAt: new Date().toLocaleString()
+        };
+
+        // Save to localStorage
+        const stored = JSON.parse(localStorage.getItem('lenscraft_inquiries') || '[]');
+        stored.unshift(inquiryData);
+        localStorage.setItem('lenscraft_inquiries', JSON.stringify(stored));
+
+        // Generate email link targeting anzaaleem1804@gmail.com
+        const mailtoLink = createDirectEmailLink(inquiryData);
+
+        // Display Success Screen
+        document.getElementById('bookingFormContainer').style.display = 'none';
+        const successCard = document.getElementById('bookingSuccessCard');
+        successCard.classList.add('active');
+
+        document.getElementById('confirmedClientName').textContent = inquiryData.name;
+        document.getElementById('confirmedService').textContent = inquiryData.service;
+        document.getElementById('confirmedDate').textContent = inquiryData.date + ' (' + inquiryData.time + ')';
+        document.getElementById('confirmedPackage').textContent = inquiryData.package;
+        document.getElementById('confirmedLocation').textContent = inquiryData.location;
+
+        const directBtn = document.getElementById('directMailtoBtn');
+        directBtn.href = mailtoLink;
+
+        // Auto trigger email client as per request
+        window.location.href = mailtoLink;
+
+        showToast("Inquiry recorded! Email client launched.");
+        loadSavedBookings();
+      });
+
+      // Reset / Book another
+      document.getElementById('bookAnotherBtn').addEventListener('click', () => {
+        document.getElementById('bookingSuccessCard').classList.remove('active');
+        document.getElementById('bookingFormContainer').style.display = 'block';
+        form.reset();
+      });
+    });
+
+    function loadSavedBookings() {
+      const stored = JSON.parse(localStorage.getItem('lenscraft_inquiries') || '[]');
+      const container = document.getElementById('previousBookingsWrap');
+      const list = document.getElementById('previousBookingsList');
+
+      if (!stored.length) {
+        container.style.display = 'none';
+        return;
+      }
+
+      container.style.display = 'block';
+      list.innerHTML = stored.map(item => `
+        <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.25rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <h4 style="font-size:1.1rem; color:var(--text-main); margin-bottom:0.2rem;">${item.service} — ${item.package}</h4>
+            <div style="color:var(--text-muted); font-size:0.85rem;">Date: ${item.date} | Location: ${item.location} | Submitted: ${item.submittedAt}</div>
+          </div>
+          <a href="${createDirectEmailLink(item)}" class="btn btn-outline btn-sm">Resend to Studio</a>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
+
+
+
