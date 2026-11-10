@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
 
@@ -418,8 +418,8 @@
               email: "zara.hamza@example.com",
               phone: "+92 300 4567890",
               service: "Wedding Photography",
-              package: "Standard Package ($599)",
-              budget: "$500 - $1,000",
+              package: "Standard Package (PKR 95,000)",
+              budget: "PKR 50,000 - PKR 100,000",
               date: "2026-11-15",
               time: "Golden Hour / Sunset",
               location: "Serena Hotel, Islamabad",
@@ -433,8 +433,8 @@
               email: "julian.vance@venture.io",
               phone: "+92 321 9876543",
               service: "Portrait and Personal Branding Photography",
-              package: "Basic Package ($299)",
-              budget: "Under $500",
+              package: "Basic Package (PKR 45,000)",
+              budget: "Under PKR 50,000",
               date: "2026-11-04",
               time: "Midday Studio",
               location: "LensCraft Daylight Studio",
@@ -448,8 +448,8 @@
               email: "press@maisonv.com",
               phone: "+92 333 1122334",
               service: "Fashion and Model Photography",
-              package: "Premium Package ($1,199)",
-              budget: "$1,000 - $2,500",
+              package: "Premium Package (PKR 185,000)",
+              budget: "PKR 100,000 - PKR 250,000",
               date: "2026-11-20",
               time: "Morning Light",
               location: "Highline Studio & Rooftop",
@@ -505,10 +505,10 @@
       const pendingCount = bookings.filter(b => b.status === 'Pending').length;
       const confirmedCount = bookings.filter(b => b.status === 'Confirmed').length;
       const totalEstimatedValue = bookings.reduce((sum, b) => {
-        if (b.package && b.package.includes('299')) return sum + 299;
-        if (b.package && b.package.includes('599')) return sum + 599;
-        if (b.package && b.package.includes('1,199')) return sum + 1199;
-        return sum + 450;
+        if (b.package && b.package.includes('299')) return sum + 45000;
+        if (b.package && b.package.includes('599')) return sum + 95000;
+        if (b.package && b.package.includes('1,199')) return sum + 185000;
+        return sum + 60000;
       }, 0);
 
       return (
@@ -580,7 +580,7 @@
                 <div className="stat-icon" style={{ color: 'var(--accent-gold)' }}>💰</div>
                 <div className="stat-info">
                   <h4>Pipeline Value</h4>
-                  <div className="stat-value">${totalEstimatedValue.toLocaleString()}</div>
+                  <div className="stat-value">PKR {totalEstimatedValue.toLocaleString()}</div>
                 </div>
               </div>
             </div>
@@ -734,3 +734,4 @@
   </script>
 </body>
 </html>
+

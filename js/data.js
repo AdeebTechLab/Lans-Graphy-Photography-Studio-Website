@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LensCraft Photography Studio - Central Data Source
  * Curated high-resolution photography showcase
  * Using user's uploaded images from the images/ folder (Max 6 per category)
@@ -205,7 +205,7 @@ const LENSCRAFT_DATA = {
       categoryLabel: "Fashion Photography",
       image: "images/fash 6.jpeg",
       description: "Rich natural backlighting enhancing delicate garments and effortless model poise.",
-      client: "Lumière Vogue",
+      client: "LumiÃ¨re Vogue",
       date: "April 2026"
     },
 
@@ -222,7 +222,7 @@ const LENSCRAFT_DATA = {
     },
     {
       id: 20,
-      title: "Gala Charity Soirée",
+      title: "Gala Charity SoirÃ©e",
       category: "event",
       categoryLabel: "Event Photography",
       image: "images/event 2.jpeg",
@@ -470,8 +470,7 @@ const LENSCRAFT_DATA = {
       id: "basic",
       name: "Basic Package",
       subtitle: "Essential & Crisp Sessions",
-      price: "$299",
-      priceValue: 299,
+      price: "PKR 45,000", priceValue: 45000,
       duration: "1.5 Hours Session",
       features: [
         "1 dedicated professional photographer",
@@ -487,8 +486,7 @@ const LENSCRAFT_DATA = {
       id: "standard",
       name: "Standard Package",
       subtitle: "Most Popular for Weddings & Events",
-      price: "$599",
-      priceValue: 599,
+      price: "PKR 95,000", priceValue: 95000,
       duration: "4 Hours Extended Session",
       features: [
         "Lead photographer + assistant",
@@ -505,8 +503,7 @@ const LENSCRAFT_DATA = {
       id: "premium",
       name: "Premium Package",
       subtitle: "Full-Day Luxury Experience",
-      price: "$1,199",
-      priceValue: 1199,
+      price: "PKR 185,000", priceValue: 185000,
       duration: "Full Day (Up to 8 Hours)",
       features: [
         "2 Principal master photographers",
