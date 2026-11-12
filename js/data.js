@@ -11,7 +11,7 @@ const LENSCRAFT_DATA = {
     tagline: "Capturing Life's Most Timeless Masterpieces",
     email: "anzaaleem1804@gmail.com",
     phone: "+92 3292450128",
-    address: "Studio 402, Highline Creative District, Lahore / Islamabad",
+    address: "Studio 402, Highline Creative District, Lahore, Pakistan",
     hours: "Mon - Sat: 9:00 AM - 7:00 PM | Sun: By Appointment",
     socials: {
       instagram: "https://instagram.com",
@@ -46,17 +46,17 @@ const LENSCRAFT_DATA = {
     },
     {
       id: 3,
-      title: "Candid Sunset Laughter",
+      title: "Ceremony Moments",
       category: "wedding",
       categoryLabel: "Wedding Photography",
       image: "images/wed 3.jpeg",
-      description: "Documentary-style candid laughter captured outdoors amidst vintage stone gardens.",
+      description: "Sacred traditional vows and emotional ceremonial moments captured with reverence.",
       client: "Elena & David",
       date: "December 2025"
     },
     {
       id: 4,
-      title: "Golden Hour Couple Portrait",
+      title: "Emotional Moment",
       category: "wedding",
       categoryLabel: "Wedding Photography",
       image: "images/wed 4.jpeg",
@@ -66,7 +66,7 @@ const LENSCRAFT_DATA = {
     },
     {
       id: 5,
-      title: "Bridal Heirloom Details",
+      title: "Emotional Embrace",
       category: "wedding",
       categoryLabel: "Wedding Photography",
       image: "images/wed 5.jpeg",
@@ -76,7 +76,7 @@ const LENSCRAFT_DATA = {
     },
     {
       id: 6,
-      title: "First Dance in Starlight",
+      title: "The Signing",
       category: "wedding",
       categoryLabel: "Wedding Photography",
       image: "images/wed 6.jpeg",
@@ -205,7 +205,7 @@ const LENSCRAFT_DATA = {
       categoryLabel: "Fashion Photography",
       image: "images/fash 6.jpeg",
       description: "Rich natural backlighting enhancing delicate garments and effortless model poise.",
-      client: "LumiÃ¨re Vogue",
+      client: "Lumi�re Vogue",
       date: "April 2026"
     },
 
@@ -222,7 +222,7 @@ const LENSCRAFT_DATA = {
     },
     {
       id: 20,
-      title: "Gala Charity SoirÃ©e",
+      title: "Gala Charity Soir�e",
       category: "event",
       categoryLabel: "Event Photography",
       image: "images/event 2.jpeg",
@@ -402,65 +402,65 @@ const LENSCRAFT_DATA = {
       id: "wedding",
       title: "Wedding Photography",
       icon: "camera",
-      image: "images/Wed 1.jpeg",
-      description: "Comprehensive coverage of your special day, capturing both grand moments and emotional glances with fine-art precision.",
-      features: ["Full day coverage options", "High-res edited gallery", "Online digital album", "Complimentary engagement shoot"]
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
+      description: "Documentary wedding storytelling designed to preserve emotional intimacy, sacred traditional rituals, and grand architectural moments.",
+      features: ["Full-day coverage options", "High-resolution edited master gallery", "Online password-protected digital album", "Complimentary engagement couple shoot"]
     },
     {
       id: "pre-wedding",
       title: "Pre-Wedding & Engagement Shoots",
       icon: "heart",
-      image: "images/wed 4.jpeg",
-      description: "Romantic, relaxed sessions designed to celebrate your love story in breathtaking outdoor or scenic destination spots.",
-      features: ["2 scenic location options", "Styling & outfit guidance", "Print-ready highlight reel", "Save-the-date cards"]
+      image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80",
+      description: "Cinematic, relaxed sessions celebrating your romantic journey across scenic destination landscapes or heritage architecture.",
+      features: ["Curated indoor/outdoor destination locations", "Professional wardrobe & styling direction", "Print-ready teaser highlights in 48 hours", "Bespoke digital save-the-date cards"]
     },
     {
       id: "portrait",
       title: "Portrait & Personal Branding",
       icon: "user",
-      image: "images/potra 1.jpeg",
-      description: "Striking headshots and creative portraits for entrepreneurs, artists, and leaders seeking a magnetic presence.",
-      features: ["Studio or on-location shoot", "Professional retouching", "Commercial use license", "LinkedIn & Press kit crops"]
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+      description: "Magnetic, editorial portraits crafted for founders, artists, and senior executives commanding authoritative presence.",
+      features: ["Private studio or corporate on-location shoot", "Precision skin & wardrobe retouching", "Commercial publishing license included", "Tailored LinkedIn, Forbes & press-kit crops"]
     },
     {
       id: "fashion",
       title: "Fashion & Model Photography",
       icon: "feather",
-      image: "images/fash 1.jpeg",
-      description: "Editorial lookbooks and campaign visual storytelling crafted specifically for fashion houses, designers, and models.",
-      features: ["Moodboard collaboration", "Tethered live preview", "High-end skin retouching", "Lookbook layout support"]
+      image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80",
+      description: "Runway-grade lookbooks, high-fashion campaigns, and model portfolios capturing garment drapery, texture, and movement.",
+      features: ["Creative concept & moodboard development", "Tethered live monitor preview during shoots", "High-end editorial skin & color grading", "Lookbook graphic layout support"]
     },
     {
       id: "corporate",
       title: "Corporate & Event Photography",
       icon: "briefcase",
-      image: "images/event 1.jpeg",
-      description: "Dynamic documentation of conferences, galas, award nights, and summits with rapid next-day PR delivery.",
-      features: ["Multi-camera coverage", "Next-day teaser batch", "Candid attendee shots", "Executive keynote coverage"]
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
+      description: "Comprehensive documentation of summits, galas, and keynotes with prompt next-day media batches for corporate PR.",
+      features: ["Multi-camera synchronized coverage", "Next-morning priority PR teaser batch", "Candid attendee & VIP dignitary moments", "Keynote stage & executive award presentations"]
     },
     {
       id: "product",
       title: "Product & E-Commerce Photography",
       icon: "package",
-      image: "images/prod 1.jpeg",
-      description: "Ultra-sharp hero images, 360 views, and lifestyle staging that elevate your brand and drive online conversion.",
-      features: ["Pure white & lifestyle sets", "Color accuracy calibration", "Amazon & Shopify ready", "Batch pricing discounts"]
+      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+      description: "High-fidelity studio staging, macro texture precision, and 360 styling designed to elevate brand perception and conversions.",
+      features: ["Seamless infinity white & lifestyle sets", "Industrial color-accuracy calibration", "Optimized for Amazon, Shopify & print catalogs", "Tiered volume batch production rates"]
     },
     {
       id: "family",
       title: "Family & Lifestyle Photography",
       icon: "smile",
-      image: "images/nat 2.jpeg",
-      description: "Cherish generations and joyous milestones with warm, unstaged family portraits in natural, comfortable settings.",
-      features: ["Fun & relaxed atmosphere", "Outdoor or home session", "Family heirloom wall art", "Full digital collection"]
+      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80",
+      description: "Timeless multi-generation family narratives captured with natural light, relaxed laughter, and unscripted warmth.",
+      features: ["Warm, unhurried, kid-friendly atmosphere", "Outdoor natural landscape or home session", "Heirloom museum-grade wall-art options", "Complete high-res digital collection"]
     },
     {
       id: "maternity",
       title: "Maternity & Newborn Photography",
       icon: "sun",
-      image: "images/potra 3.jpeg",
-      description: "Gentle, timeless celebrations of new beginnings with warm studio light and utmost baby safety protocols.",
-      features: ["Safe, climate-controlled studio", "Delicate wraps & props provided", "Patience for feeding breaks", "Mother & newborn bonding shots"]
+      image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80",
+      description: "Gentle, serene celebrations of new life with soft ambient studio illumination and strict newborn safety standards.",
+      features: ["Climate-controlled private studio sanctum", "Artisanal organic wraps & delicate props provided", "Ample time allocated for feeding breaks", "Intimate mother-infant bonding captures"]
     }
   ],
 
@@ -470,7 +470,8 @@ const LENSCRAFT_DATA = {
       id: "basic",
       name: "Basic Package",
       subtitle: "Essential & Crisp Sessions",
-      price: "PKR 45,000", priceValue: 45000,
+      price: "PKR 45,000",
+      priceValue: 45000,
       duration: "1.5 Hours Session",
       features: [
         "1 dedicated professional photographer",
@@ -486,92 +487,105 @@ const LENSCRAFT_DATA = {
       id: "standard",
       name: "Standard Package",
       subtitle: "Most Popular for Weddings & Events",
-      price: "PKR 95,000", priceValue: 95000,
+      price: "PKR 95,000",
+      priceValue: 95000,
       duration: "4 Hours Extended Session",
       features: [
-        "Lead photographer + assistant",
-        "Up to 2 distinct locations",
-        "65 professionally retouched photos",
-        "Priority editing within 4 business days",
-        "Full resolution download + web optimized",
-        "Custom USB presentation keepsake box",
-        "Commercial & personal printing rights"
+        "2 dedicated senior photographers",
+        "Up to 2 locations or indoor/outdoor setup",
+        "75 professionally color-graded master images",
+        "Private online gallery with instant download",
+        "Sneak-peek highlights within 48 hours",
+        "Handcrafted heirloom photobook keepsake",
+        "Full commercial & personal rights"
       ],
       popular: true
     },
     {
       id: "premium",
       name: "Premium Package",
-      subtitle: "Full-Day Luxury Experience",
-      price: "PKR 185,000", priceValue: 185000,
+      subtitle: "The Ultimate Bespoke Atelier Experience",
+      price: "PKR 185,000",
+      priceValue: 185000,
       duration: "Full Day (Up to 8 Hours)",
       features: [
-        "2 Principal master photographers",
-        "Unlimited locations & outfit changes",
-        "150+ master retouched photographs",
-        "Drone aerial photography included",
-        "Express 48-hour delivery",
-        "Handcrafted 30-page Italian leather album",
-        "All raw files + 4K cinematic highlight slideshow"
+        "Lead Master Photographer + 2 Associates",
+        "Full event & multi-destination coverage",
+        "200+ fully retouched magazine-grade images",
+        "4K cinematic video reel highlight (3-5 min)",
+        "Luxury Italian leather wedding heirloom album",
+        "Express delivery within 48 hours",
+        "VIP archival cloud backup forever"
       ],
       popular: false
     }
   ],
 
-  // Photographers & Team
-  team: [
-    {
-      name: "Alexander Vance",
-      role: "Lead Master Photographer & Founder",
-      bio: "12+ years capturing high-end weddings and fine art portraits globally. Featured in Vogue & National Geographic.",
-      image: "images/potra 2.jpeg"
-    },
-    {
-      name: "Sophia Sterling",
-      role: "Head of Editorial & Fashion",
-      bio: "Specializes in dramatic lighting and fashion campaign direction, bringing commercial flair and modern grace.",
-      image: "images/potra 1.jpeg"
-    },
-    {
-      name: "Marcus Aurel",
-      role: "Cinematographer & Event Lead",
-      bio: "Master of candid moments and corporate summit narratives with lightning-quick post-production turnaround.",
-      image: "images/potra 4.jpeg"
-    }
-  ],
-
-  // Client Testimonials
+  // Frequently Asked Questions
+    // Curated National & International Client Experiences
   testimonials: [
     {
       id: 1,
-      name: "Claire & Thomas Mitchell",
-      role: "Wedding Clients",
-      avatar: "images/potra 3.jpeg",
-      text: "LensCraft captured our wedding day with so much grace and authenticity. Looking through our album brings tears of joy every single time. Absolutely world-class artistry!",
-      service: "Wedding Photography",
-      rating: 5
+      name: "Ayesha & Hamza Malik",
+      role: "Bridal Couple",
+      location: "Lahore, Pakistan (National)",
+      service: "Royal Wedding Coverage (3-Day)",
+      avatar: "images/potra 1.jpeg",
+      rating: 5,
+      text: "LensCraft captured our multi-day Lahore wedding with sheer royal grace. The raw emotional tears, laughter, and heritage heirloom album exceeded every expectation. Alexander Vance and his team felt like family!"
     },
     {
       id: 2,
-      name: "David Chen",
-      role: "CEO, Horizon Tech",
+      name: "Sophie & David Beaumont",
+      role: "Destination Wedding Clients",
+      location: "Paris, France (International)",
+      service: "Destination Nuptials & Editorial Shoot",
       avatar: "images/potra 2.jpeg",
-      text: "Our annual leadership summit was documented flawlessly. The photographers were discrete, polished, and delivered PR-ready assets the very next morning.",
-      service: "Corporate & Event Photography",
-      rating: 5
+      rating: 5,
+      text: "We flew Alexander and the LensCraft crew to Europe for our Normandy estate vows. Their editorial eye and command of natural dusk lighting produced magazine-cover imagery that our families in France and the UK treasure daily."
     },
     {
       id: 3,
-      name: "Elena Rostova",
-      role: "Fashion Designer",
-      avatar: "images/potra 1.jpeg",
-      text: "The lighting and mood created for our Autumn Lookbook exceeded all expectations. Our international sales increased by 40% thanks to these stunning visuals.",
-      service: "Fashion Photography",
-      rating: 5
+      name: "Bilal Siddiqui",
+      role: "Founder & Creative Director, Saffron Silk",
+      location: "Karachi, Pakistan (National)",
+      service: "Fashion Lookbook & Commercial Campaign",
+      avatar: "images/potra 4.jpeg",
+      rating: 5,
+      text: "As an apparel brand launching our winter collection, we needed flawless textile textures and color fidelity. LensCraft delivered sharp, vibrant campaign images that drove a 40% jump in our online launch sales."
+    },
+    {
+      id: 4,
+      name: "Elena Rostova & Marcus Sterling",
+      role: "Executive Clients",
+      location: "London, United Kingdom (International)",
+      service: "Highline Portrait & Personal Branding",
+      avatar: "images/potra 3.jpeg",
+      rating: 5,
+      text: "World-class studio production! The private studio in the Highline District is serene, professional, and equipped with medium-format precision. My executive headshots command immediate authority across Bloomberg and Forbes."
+    },
+    {
+      id: 5,
+      name: "Zainab & Daniyal Qureshi",
+      role: "Milestone & Family Clients",
+      location: "Islamabad, Pakistan (National)",
+      service: "Heirloom Family & Outdoor Lifestyle",
+      avatar: "images/potra 5.jpeg",
+      rating: 5,
+      text: "Capturing three generations with young toddlers seemed impossible until LensCraft stepped in. The warm, patient direction and unstaged candid laughter turned into wall art that will live in our family home forever."
+    },
+    {
+      id: 6,
+      name: "Kenji Takahashi",
+      role: "Brand Director, Lumina Timepieces",
+      location: "Tokyo, Japan (International)",
+      service: "Commercial Luxury Watch Campaign",
+      avatar: "images/potra 6.jpeg",
+      rating: 5,
+      text: "LensCraft’s mastery of macro reflection control and chamfer edge illumination on our luxury chronographs was immaculate. A truly global standard studio with unmatched creative vision and rapid turnaround."
     }
   ],
 
-  // Studio FAQs
   faqs: [
     {
       question: "How can I book a photography session?",
@@ -603,3 +617,6 @@ const LENSCRAFT_DATA = {
     }
   ]
 };
+
+
+

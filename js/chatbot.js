@@ -1,4 +1,4 @@
-/**
+﻿/**
  * LensCraft Photography Studio - AI Studio Assistant
  * Functionality:
  * 1. Friendly time-based greeting (Good morning / afternoon / evening)

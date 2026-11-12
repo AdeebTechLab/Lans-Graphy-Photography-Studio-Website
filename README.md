@@ -1,4 +1,4 @@
-# LensCraft — Photography Studio Portfolio Website
+﻿# LensCraft — Photography Studio Portfolio Website
 
 An elegant, modern, and fully responsive website developed for **LensCraft Photography Studio**. The platform showcases the studio's portfolio, photography services, transparent pricing packages, photographer backgrounds, and an interactive session booking flow.
 
@@ -20,7 +20,7 @@ An elegant, modern, and fully responsive website developed for **LensCraft Photo
 
 3. **Direct Contact Routing & Booking Automation**:
    - All booking reservations, custom package selections, and contact submissions automatically pre-populate and route to:
-     - **Email**: `anzaaleem1804@gmail.com`
+     - **Email**: `anzaaleem122@gmail.com`
      - **Phone / WhatsApp**: `+92 3292450128`
    - Validates required fields, inputs, and formats before generating clean email dispatches and persisting appointments in `localStorage` for demo continuity.
 
@@ -79,8 +79,8 @@ Navigate to `http://localhost:8080` or the indicated port.
 - [x] **Portfolio Page**: 6 required categories, uniform 4:3 image cards, instant category filtering without page reload, lightbox modal with prev/next navigation, and graceful empty state.
 - [x] **Services Page**: 8 distinct services (Wedding, Pre-Wedding, Portrait, Fashion, Corporate, Product, Family, Maternity) with direct inquiry CTA links.
 - [x] **Packages Page**: Basic ($299), Standard ($599), Premium ($1,199) with full side-by-side comparison matrix and interactive FAQ accordion.
-- [x] **Booking Page**: Validated intake (Name, Email, Phone, Service, Date, Time, Location, Package, Budget, Message) with demo `localStorage` log and direct mailto linking to `anzaaleem1804@gmail.com`.
-- [x] **Contact Page**: Features studio email `anzaaleem1804@gmail.com`, phone `+92 3292450128`, business hours, validated form, and interactive map placeholder.
+- [x] **Booking Page**: Validated intake (Name, Email, Phone, Service, Date, Time, Location, Package, Budget, Message) with demo `localStorage` log and direct mailto linking to `anzaaleem122@gmail.com`.
+- [x] **Contact Page**: Features studio email `anzaaleem122@gmail.com`, phone `+92 3292450128`, business hours, validated form, and interactive map placeholder.
 - [x] **Design & UI/UX**: Fluid typography, dark/light theme toggle, zero lateral whitespace, and accessible focus states.
 
 ---

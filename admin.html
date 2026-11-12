@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
 
@@ -288,6 +288,7 @@
 
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/chatbot.js"></script>
 
   <!-- REACT AUTHENTICATED ADMIN COMPONENT -->
   <script type="text/babel">
@@ -349,7 +350,7 @@
 
             <main className="login-overlay">
               <div className="login-card">
-                <div className="login-icon">🔒</div>
+                <div className="login-icon">??</div>
                 <h2>Studio Director Login</h2>
                 <p>Private management portal for LensCraft Photography Studio. Please verify your credentials to view client booking inquiries.</p>
 
@@ -418,8 +419,8 @@
               email: "zara.hamza@example.com",
               phone: "+92 300 4567890",
               service: "Wedding Photography",
-              package: "Standard Package (PKR 95,000)",
-              budget: "PKR 50,000 - PKR 100,000",
+              package: "Standard Package ($599)",
+              budget: "$500 - $1,000",
               date: "2026-11-15",
               time: "Golden Hour / Sunset",
               location: "Serena Hotel, Islamabad",
@@ -433,8 +434,8 @@
               email: "julian.vance@venture.io",
               phone: "+92 321 9876543",
               service: "Portrait and Personal Branding Photography",
-              package: "Basic Package (PKR 45,000)",
-              budget: "Under PKR 50,000",
+              package: "Basic Package ($299)",
+              budget: "Under $500",
               date: "2026-11-04",
               time: "Midday Studio",
               location: "LensCraft Daylight Studio",
@@ -448,8 +449,8 @@
               email: "press@maisonv.com",
               phone: "+92 333 1122334",
               service: "Fashion and Model Photography",
-              package: "Premium Package (PKR 185,000)",
-              budget: "PKR 100,000 - PKR 250,000",
+              package: "Premium Package ($1,199)",
+              budget: "$1,000 - $2,500",
               date: "2026-11-20",
               time: "Morning Light",
               location: "Highline Studio & Rooftop",
@@ -505,10 +506,10 @@
       const pendingCount = bookings.filter(b => b.status === 'Pending').length;
       const confirmedCount = bookings.filter(b => b.status === 'Confirmed').length;
       const totalEstimatedValue = bookings.reduce((sum, b) => {
-        if (b.package && b.package.includes('299')) return sum + 45000;
-        if (b.package && b.package.includes('599')) return sum + 95000;
-        if (b.package && b.package.includes('1,199')) return sum + 185000;
-        return sum + 60000;
+        if (b.package && b.package.includes('299')) return sum + 299;
+        if (b.package && b.package.includes('599')) return sum + 599;
+        if (b.package && b.package.includes('1,199')) return sum + 1199;
+        return sum + 450;
       }, 0);
 
       return (
@@ -553,7 +554,7 @@
             {/* Metrics */}
             <div className="stats-grid">
               <div className="stat-card">
-                <div className="stat-icon">📅</div>
+                <div className="stat-icon">??</div>
                 <div className="stat-info">
                   <h4>Total Received</h4>
                   <div className="stat-value">{totalBookings}</div>
@@ -561,7 +562,7 @@
               </div>
 
               <div className="stat-card">
-                <div className="stat-icon" style={{ color: '#eab308' }}>⏳</div>
+                <div className="stat-icon" style={{ color: '#eab308' }}>?</div>
                 <div className="stat-info">
                   <h4>Pending Review</h4>
                   <div className="stat-value">{pendingCount}</div>
@@ -569,7 +570,7 @@
               </div>
 
               <div className="stat-card">
-                <div className="stat-icon" style={{ color: '#22c55e' }}>✓</div>
+                <div className="stat-icon" style={{ color: '#22c55e' }}>?</div>
                 <div className="stat-info">
                   <h4>Confirmed Shoots</h4>
                   <div className="stat-value">{confirmedCount}</div>
@@ -577,10 +578,10 @@
               </div>
 
               <div className="stat-card">
-                <div className="stat-icon" style={{ color: 'var(--accent-gold)' }}>💰</div>
+                <div className="stat-icon" style={{ color: 'var(--accent-gold)' }}>??</div>
                 <div className="stat-info">
                   <h4>Pipeline Value</h4>
-                  <div className="stat-value">PKR {totalEstimatedValue.toLocaleString()}</div>
+                  <div className="stat-value">${totalEstimatedValue.toLocaleString()}</div>
                 </div>
               </div>
             </div>
@@ -667,9 +668,9 @@
                           )}
                         </td>
                         <td>
-                          <div style={{ color: 'var(--text-main)', fontWeight: '500' }}>📅 {item.date}</div>
-                          <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>🕒 {item.time || 'Standard Call'}</div>
-                          <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>📍 {item.location}</div>
+                          <div style={{ color: 'var(--text-main)', fontWeight: '500' }}>?? {item.date}</div>
+                          <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>?? {item.time || 'Standard Call'}</div>
+                          <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>?? {item.location}</div>
                         </td>
                         <td>
                           <span className={`status-badge status-${item.status.toLowerCase()}`}>
@@ -715,7 +716,7 @@
                               style={{ padding: '0.35rem 0.65rem', fontSize: '0.75rem', color: '#ef4444', borderColor: 'rgba(239, 68, 68, 0.3)' }}
                               title="Delete"
                             >
-                              ✕
+                              ?
                             </button>
                           </div>
                         </td>
@@ -734,4 +735,5 @@
   </script>
 </body>
 </html>
+
 

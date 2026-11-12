@@ -15,10 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initLightbox();
   initBookingChoiceModal();
-  initHeroSlider();
-  initCinematicSlider();
-  initAtelierCarousel();
-  initCrownHeroForm();
   initBespokeHeroConsole();
 });
 
@@ -353,243 +349,22 @@ function createDirectEmailLink(details) {
 function createDirectWhatsAppLink(details) {
   const phoneDigits = "923292450128";
   let msg = `*LensCraft Studio Booking Inquiry*\n\n`;
-  msg += `• *Name:* ${details.name || 'Client'}\n`;
-  msg += `• *Email:* ${details.email || 'N/A'}\n`;
-  msg += `• *Phone:* ${details.phone || 'N/A'}\n`;
-  msg += `• *Service:* ${details.service || 'Studio Session'}\n`;
-  msg += `• *Package:* ${details.package || 'N/A'}\n`;
-  msg += `• *Date:* ${details.date || 'Flexible'}\n`;
-  msg += `• *Time:* ${details.time || 'Flexible'}\n`;
-  msg += `• *Location:* ${details.location || 'Studio'}\n`;
-  msg += `• *Budget:* ${details.budget || 'Standard rates'}\n\n`;
+  msg += `*Name:* ` + (details.name || 'Client') + `\n`;
+  msg += `*Email:* ` + (details.email || 'N/A') + `\n`;
+  msg += `*Phone:* ` + (details.phone || 'N/A') + `\n`;
+  msg += `*Service:* ` + (details.service || 'Studio Session') + `\n`;
+  msg += `*Package:* ` + (details.package || 'N/A') + `\n`;
+  msg += `*Date:* ` + (details.date || 'Flexible') + `\n`;
+  msg += `*Time:* ` + (details.time || 'Flexible') + `\n`;
+  msg += `*Location:* ` + (details.location || 'Studio') + `\n`;
+  msg += `*Budget:* ` + (details.budget || 'Standard rates') + `\n\n`;
   if (details.message) {
-    msg += `• *Message:* ${details.message}\n\n`;
+    msg += `*Message:* ` + details.message + `\n\n`;
   }
   msg += `Looking forward to your confirmation!`;
   return `https://wa.me/${phoneDigits}?text=` + encodeURIComponent(msg);
 }
 
-
-// Ensure no active element retains browser focus ring after mouse clicks
-document.addEventListener('mouseup', (e) => {
-  if (e.target && typeof e.target.blur === 'function') {
-    e.target.blur();
-  }
-});
-
-/* ----------------- Hero Showcase Interactive Slider ----------------- */
-function initHeroSlider() {
-  const slides = document.querySelectorAll('.hero-slide');
-  const dots = document.querySelectorAll('.slider-dot');
-  const prevBtn = document.getElementById('heroSlidePrev');
-  const nextBtn = document.getElementById('heroSlideNext');
-  
-  if (!slides.length) return;
-  
-  let currentSlide = 0;
-  let slideInterval = null;
-
-  function goToSlide(index) {
-    slides[currentSlide].classList.remove('active');
-    dots[currentSlide]?.classList.remove('active');
-    
-    currentSlide = (index + slides.length) % slides.length;
-    
-    slides[currentSlide].classList.add('active');
-    dots[currentSlide]?.classList.add('active');
-  }
-
-  function nextSlide() {
-    goToSlide(currentSlide + 1);
-  }
-
-  function prevSlide() {
-    goToSlide(currentSlide - 1);
-  }
-
-  prevBtn?.addEventListener('click', () => {
-    prevSlide();
-    resetInterval();
-  });
-
-  nextBtn?.addEventListener('click', () => {
-    nextSlide();
-    resetInterval();
-  });
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const target = parseInt(dot.getAttribute('data-slide'), 10);
-      if (!isNaN(target)) {
-        goToSlide(target);
-        resetInterval();
-      }
-    });
-  });
-
-  function startInterval() {
-    slideInterval = setInterval(nextSlide, 5000);
-  }
-
-  function resetInterval() {
-    clearInterval(slideInterval);
-    startInterval();
-  }
-
-  startInterval();
-}
-
-/* ----------------- Fullscreen Cinematic Visual Showcase Controller ----------------- */
-function initCinematicSlider() {
-  const slides = document.querySelectorAll('.cinematic-slide');
-  const pills = document.querySelectorAll('.cinematic-dot-pill');
-  const prevBtn = document.getElementById('cinematicPrev');
-  const nextBtn = document.getElementById('cinematicNext');
-  
-  if (!slides.length) return;
-  
-  let currentSlide = 0;
-  let timer = null;
-
-  function setSlide(index) {
-    slides[currentSlide].classList.remove('active');
-    pills[currentSlide]?.classList.remove('active');
-    
-    currentSlide = (index + slides.length) % slides.length;
-    
-    slides[currentSlide].classList.add('active');
-    pills[currentSlide]?.classList.add('active');
-  }
-
-  function next() {
-    setSlide(currentSlide + 1);
-  }
-
-  function prev() {
-    setSlide(currentSlide - 1);
-  }
-
-  prevBtn?.addEventListener('click', () => {
-    prev();
-    restartTimer();
-  });
-
-  nextBtn?.addEventListener('click', () => {
-    next();
-    restartTimer();
-  });
-
-  pills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      const target = parseInt(pill.getAttribute('data-slide'), 10);
-      if (!isNaN(target)) {
-        setSlide(target);
-        restartTimer();
-      }
-    });
-  });
-
-  function startTimer() {
-    timer = setInterval(next, 5000);
-  }
-
-  function restartTimer() {
-    clearInterval(timer);
-    startTimer();
-  }
-
-  startTimer();
-}
-
-/* ----------------- Modern Luxury Visual Atelier Carousel Controller ----------------- */
-function initAtelierCarousel() {
-  const slides = document.querySelectorAll('.atelier-slide');
-  const dots = document.querySelectorAll('.atelier-dot');
-  const prevBtn = document.getElementById('atelierPrev');
-  const nextBtn = document.getElementById('atelierNext');
-  const counterNum = document.getElementById('atelierCurrentNum');
-  
-  if (!slides.length) return;
-  
-  let current = 0;
-  let timer = null;
-
-  function showSlide(index) {
-    slides[current].classList.remove('active');
-    dots[current]?.classList.remove('active');
-    
-    current = (index + slides.length) % slides.length;
-    
-    slides[current].classList.add('active');
-    dots[current]?.classList.add('active');
-    
-    if (counterNum) {
-      counterNum.textContent = String(current + 1).padStart(2, '0');
-    }
-  }
-
-  function next() {
-    showSlide(current + 1);
-  }
-
-  function prev() {
-    showSlide(current - 1);
-  }
-
-  prevBtn?.addEventListener('click', () => {
-    prev();
-    reset();
-  });
-
-  nextBtn?.addEventListener('click', () => {
-    next();
-    reset();
-  });
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const idx = parseInt(dot.getAttribute('data-slide'), 10);
-      if (!isNaN(idx)) {
-        showSlide(idx);
-        reset();
-      }
-    });
-  });
-
-  function start() {
-    timer = setInterval(next, 5000);
-  }
-
-  function reset() {
-    clearInterval(timer);
-    start();
-  }
-
-  start();
-}
-
-/* ----------------- Crown Style Hero Quick WhatsApp Booking ----------------- */
-function initCrownHeroForm() {
-  const form = document.getElementById('crownHeroForm');
-  if (!form) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const loc = document.getElementById('heroLocationInput')?.value.trim() || 'Studio';
-    const cat = document.getElementById('heroCategorySelect')?.value || 'Photography Session';
-    const pkg = document.getElementById('heroPackageSelect')?.value || 'Standard';
-
-    const phoneDigits = "923292450128";
-    let msg = `*LensCraft Studio Quick Inquiry*\n\n`;
-    msg += `• *Service/Category:* ${cat}\n`;
-    msg += `• *Preferred Location:* ${loc}\n`;
-    msg += `• *Package Choice:* ${pkg}\n\n`;
-    msg += `Hello! I would like to check availability and book this session.`;
-
-    const waUrl = `https://wa.me/${phoneDigits}?text=` + encodeURIComponent(msg);
-    window.open(waUrl, '_blank', 'noopener,noreferrer');
-  });
-}
 
 /* ----------------- Bespoke LensCraft Hero Console & Dynamic Background ----------------- */
 function initBespokeHeroConsole() {
@@ -626,10 +401,10 @@ function initBespokeHeroConsole() {
 
       const phoneDigits = "923292450128";
       let msg = `*LensCraft Studio Private Session Inquiry*\n\n`;
-      msg += `• *Category / Discipline:* ${selectedCategory}\n`;
-      msg += `• *Preferred Date:* ${dateVal}\n`;
-      msg += `• *Location / Venue:* ${locVal}\n`;
-      msg += `• *Curated Package:* ${pkgVal}\n\n`;
+      msg += `*Category / Discipline:* ` + selectedCategory + `\n`;
+      msg += `*Preferred Date:* ` + dateVal + `\n`;
+      msg += `*Location / Venue:* ` + locVal + `\n`;
+      msg += `*Curated Package:* ` + pkgVal + `\n\n`;
       msg += `Hello! I would like to reserve this session with LensCraft Photography Studio.`;
 
       const waUrl = `https://wa.me/${phoneDigits}?text=` + encodeURIComponent(msg);
@@ -637,3 +412,32 @@ function initBespokeHeroConsole() {
     });
   }
 }
+
+
+/* ----------------- Dynamic Hero Animated Headline Words ----------------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const words = [
+    'Moments Turn Timeless',
+    'Stories Become Art',
+    'Memories Live Forever',
+    'Emotions Shine Brightest'
+  ];
+  let currentWordIdx = 0;
+  const wordEl = document.getElementById('dynamicHeroWord');
+
+  if (wordEl) {
+    setInterval(() => {
+      wordEl.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+      wordEl.style.opacity = '0';
+      wordEl.style.transform = 'translateY(10px)';
+
+      setTimeout(() => {
+        currentWordIdx = (currentWordIdx + 1) % words.length;
+        wordEl.textContent = words[currentWordIdx];
+        wordEl.style.opacity = '1';
+        wordEl.style.transform = 'translateY(0)';
+      }, 420);
+    }, 3800);
+  }
+});
+
